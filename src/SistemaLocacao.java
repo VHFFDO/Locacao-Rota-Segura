@@ -2,13 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SistemaLocacao {
-    //Inicio das Listas
+    //Inicio Atributos
     private List<Veiculo> frota;
-
     private List<Cliente> cadastroClientes;
-
     private List<Contrato> historicoLocacoes;
-    //Fim das Listas
+    private ArquivoLocacoes arquivoLocacoes;
+    //Fim Atributos
 
 
     //Inicio Construtor
@@ -16,6 +15,7 @@ public class SistemaLocacao {
         frota = new ArrayList<>();
         cadastroClientes = new ArrayList<>();
         historicoLocacoes = new ArrayList<>();
+        arquivoLocacoes = new ArquivoLocacoes();
     }
     //Fim Construtor
 
@@ -33,8 +33,27 @@ public class SistemaLocacao {
 
     //Inicio do Metodo de Registro da Locação
     public void registrarLocacao(Contrato novaLocacao){
+        if (novaLocacao == null) {
+            throw new IllegalArgumentException("Locação não informada");
+        }
+        
         historicoLocacoes.add(novaLocacao);
+        arquivoLocacoes.salvar(novaLocacao);
     }
     //Inicio do Metodo do Registro da Locação
+
+    //Inicio do Metodo do Recibo
+    public Recibo fecharLocacao(Contrato contrato) {
+        if (contrato == null) {
+            throw new IllegalArgumentException("Contrato não informado");
+        }
+
+        contrato.encerrarLocacao();
+
+        Recibo recibo = new Recibo(contrato);
+
+        return recibo;
+    }
+    //Fim do Metodo do Recibo
 
 }

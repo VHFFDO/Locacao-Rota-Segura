@@ -1,0 +1,7 @@
+CONTRATO DE LOCAÇÃO 
+Cliente: Gustavo da Silva
+Veiculo: Onix
+Data de inicio: 2026-10-07
+Data de fim: 2026-10-10
+Valor total: R$450.0
+-------------------------

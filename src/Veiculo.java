@@ -48,39 +48,39 @@ public abstract class Veiculo {
     //Fim Getter
 
     //Inicio Setter
-    public void setMarca(String Marca) {
+    public void setMarca(String marca) {
         if (marca == null) {
             throw new IllegalArgumentException("Marca invalida");
         }
-        this.marca = Marca;
+        this.marca = marca;
     }
 
-    public void setModelo(String Modelo) {
+    public void setModelo(String modelo) {
         if (modelo == null) {
             throw new IllegalArgumentException("Modelo invalido");
         }
-        this.modelo = Modelo;
+        this.modelo = modelo;
     }
 
-    public void setAno(int Ano) {
+    public void setAno(int ano) {
         if (ano < 1900) {
             throw new IllegalArgumentException("Ano invalido");
         }
-        this.ano = Ano;
+        this.ano = ano;
     }
 
-    public void setCor(String Cor) {
+    public void setCor(String cor) {
         if (cor == null) {
             throw new IllegalArgumentException("Cor invalida");
         }
-        this.cor = Cor;
+        this.cor = cor;
     }
 
-    public void setPlaca(String Placa) {
-        if (cor == null) {
+    public void setPlaca(String placa) {
+        if (placa == null) {
             throw new IllegalArgumentException("Placa invalida");
         }
-        this.placa = Placa;
+        this.placa = placa;
     }
     //Fim Setter
     

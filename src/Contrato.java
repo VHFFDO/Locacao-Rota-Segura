@@ -75,6 +75,12 @@ public class Contrato implements Documento {
         return calcularValorDiarias() + calcularValorSeguro() + calcularValorManutencao();
     }
     //Fim Metodo de Calcular Valor Total
+
+    //Inicio Metodo de Encerrar a Locação
+    public void encerrarLocacao() {
+        veiculoAlugado.devolver();
+    }
+    //Fim Metodo de Encerrar a Locação
     
     //Inicio Sobrescrevendo Metodo Gerar Texto do Contrato da Interface
     @Override
