@@ -1,5 +1,11 @@
 public class Suv extends Veiculo{
-
+    //Inicio Contrutor da classe-pai
+    public Suv(String marca, String modelo, int ano, String cor,
+    String placa) {
+        super(marca, modelo, ano, cor, placa);
+    }
+    //Fim Contrutor da classe-pai
+    
     //Inicio Sobrescrevendo a Abstração
     @Override
     public double calcularDiaria() {
@@ -16,11 +22,4 @@ public class Suv extends Veiculo{
         return 60.00;
     }
     //Fim Sobrescrevendo a Abstração
-
-    //Inicio Contrutor da classe-pai
-    public Suv(String marca, String modelo, int ano, String cor, String placa) {
-        super(marca, modelo, ano, cor, placa);
-    }
-    //Fim Contrutor da classe-pai
-
 }
