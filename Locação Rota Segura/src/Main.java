@@ -1,41 +1,57 @@
+import gui.TelaPrincipal;
+
+import javax.swing.SwingUtilities;
 import java.time.LocalDate;
 
 public class Main {
-    
+
     public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(() -> {
+            TelaPrincipal tela = new TelaPrincipal();
+            tela.setVisible(true);
+        });
+    }
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
         SistemaLocacao sistema = new SistemaLocacao();
 
-        Veiculo novoPopular = new Popular("Chevrolet", "Onix", 2024, "Prata", "ABC1D23");
 
-        Veiculo novoSedan = new Sedan("Toyota", "Corolla", 2023, "Preto", "DEF4G56");
+        model.Veiculo novoPopular = new model.Popular("Chevrolet", "Onix", 2024, "Prata", "ABC1D23");
 
-        Veiculo novoSUV = new Suv("Jeep", "Compass", 2025, "Branco", "HIJ7K89");
+        model.Veiculo novoSedan = new model.Sedan("Toyota", "Corolla", 2023, "Preto", "DEF4G56");
+
+        model.Veiculo novoSUV = new model.Suv("Jeep", "Compass", 2025, "Branco", "HIJ7K89");
 
         sistema.cadastrarVeiculo(novoPopular);
         sistema.cadastrarVeiculo(novoSedan);
         sistema.cadastrarVeiculo(novoSUV);
 
-        Cliente novoCliente = new Cliente("Gustavo da Silva", "12345678900", "14999999999");
+        model.Cliente novoCliente = new model.Cliente("Gustavo da Silva", "12345678900", "14999999999");
 
         sistema.cadastroCliente(novoCliente);
 
-        Contrato novaLoacacao = new Contrato(novoCliente, novoPopular, LocalDate.of(2026, 10, 7), LocalDate.of(2026, 10, 10));
+        model.Contrato novaLoacacao = new model.Contrato(novoCliente, novoPopular, LocalDate.of(2026, 10, 7), LocalDate.of(2026, 10, 10));
 
         sistema.registrarLocacao(novaLoacacao);
 
         System.out.println(novaLoacacao.gerar());
 
-        Recibo recibo = sistema.fecharLocacao(novaLoacacao);
+        model.Recibo recibo = sistema.fecharLocacao(novaLoacacao);
 
         recibo.imprimir();
-
+*/
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 
         System.out.println("\n--- TESTE: VEÍCULO OCUPADO ---");
 
         try {
 
-            Contrato segundaLocacao = new Contrato(
+            model.Contrato segundaLocacao = new model.Contrato(
                 novoCliente,
                 novoPopular,
                 LocalDate.of(2026, 10, 11),
@@ -56,7 +72,7 @@ public class Main {
 
         try {
 
-            Contrato contratoInvalido = new Contrato(
+            model.Contrato contratoInvalido = new model.Contrato(
                 novoCliente,
                 novoSedan,
                 LocalDate.of(2026, 10, 20),
@@ -76,7 +92,7 @@ public class Main {
         System.out.println("\n--- TESTE: CLIENTE INVÁLIDO ---");
 
         try {
-            Cliente clienteInvalido = new Cliente(
+            model.Cliente clienteInvalido = new model.Cliente(
                 "",
                 "123",
                 "14999999999"
@@ -89,7 +105,7 @@ public class Main {
                 "Erro tratado: " + erro.getMessage()
             );
         }
-*/
         }
 
 }
+*/

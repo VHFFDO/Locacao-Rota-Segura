@@ -22,7 +22,7 @@
 O fluxo principal da aplicação é iniciado pela classe `Main`.
 
 1. O sistema cria uma instância de `SistemaLocacao`.
-2. São cadastrados veículos das categorias Popular, Sedan e SUV.
+2. São cadastrados veículos das categorias model.Popular, model.Sedan e SUV.
 3. Um cliente é cadastrado no sistema.
 4. É criada uma nova locação informando o cliente, o veículo e as datas.
 5. O `Contrato` valida os dados e verifica se o veículo está disponível.
@@ -49,7 +49,7 @@ Foi criada uma tentativa de locação com a data final anterior à data inicial.
 
 **Resultado:** o sistema rejeitou o contrato e apresentou uma exceção informando que as datas eram inválidas.
 
-### **4. Cliente inválido**
+### **4. model.Cliente inválido**
 Foi realizada uma tentativa de cadastro utilizando um nome vazio.
 
 **Resultado:** o sistema rejeitou o cadastro e apresentou uma exceção de validação.
